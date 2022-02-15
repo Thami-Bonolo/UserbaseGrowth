@@ -1,8 +1,6 @@
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -16,7 +14,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.DisplayName;
 
 /**
  *
@@ -64,7 +61,6 @@ public class UserbaseGraphJUnitTest {
     }
 
     @Test
-    @DisplayName("Calculation of range from start and end date should work")
     public void testDomain() throws Exception{
         ubg.setStart("02 01 2022");
         ubg.setEnd("08 01 2022");

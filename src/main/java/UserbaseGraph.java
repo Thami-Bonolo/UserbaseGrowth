@@ -147,9 +147,7 @@ public class UserbaseGraph {
     */
     public void deleteFile(String filename){
         File file = new File(filename);
-        if(file.delete()){
-            System.out.println("File succesfully deleted");
-        }
+        if(file.delete()){}
     }
 
     public HttpURLConnection getHR(){
