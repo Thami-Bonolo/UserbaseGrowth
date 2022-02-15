@@ -36,11 +36,11 @@ public class UserbaseGraph {
         }else{setEnd("15 01 2022");}
     }
 
-    private void setStart(String start) {
+    public final void setStart(String start) {
         this.start = start;
     }
 
-    private void setEnd(String end) {
+    public final void setEnd(String end) {
         this.end = end;
     }
 
@@ -155,6 +155,14 @@ public class UserbaseGraph {
     public HttpURLConnection getHR(){
         return hr;
     }
+
+    public BufferedReader getReader(){
+        return bReader;
+    }
+
+public Object[][] getArray(){
+return array;
+}
 
     public void RunPython(){
 
