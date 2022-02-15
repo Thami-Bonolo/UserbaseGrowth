@@ -152,6 +152,10 @@ public class UserbaseGraph {
         }
     }
 
+    public HttpURLConnection getHR(){
+        return hr;
+    }
+
     public void RunPython(){
 
         try {
