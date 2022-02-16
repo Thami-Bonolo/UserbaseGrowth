@@ -19,7 +19,7 @@ public class Main {
             if(args[0].length() != 10){
                 System.out.println("Start date is incorrect. use format \"dd MM yy\".");
                 return;
-            }else if(args[1].length() != 10){
+            }else if(args.length>1 && args[1].length() != 10){
                 System.out.println("End date is incorrect. use format \"dd MM yy\".");
                 return;
             }
@@ -38,12 +38,12 @@ public class Main {
             inputEnd = "15 01 2022";
         }
         UserbaseGraph ubg = new UserbaseGraph(link, inputStart, inputEnd);
-        ubg.conncet();
-        ubg.readData();
-        ubg.storeData();
-        ubg.writeToFile("GraphData.txt");
-        ubg.RunPython();
-        ubg.deleteFile("GraphData.txt");
+        ubg.conncet();  //Connect to the URL
+        ubg.readData(); //create a bufferedreader of site data
+        ubg.storeData();    //store data in an array of object for easy processing
+        ubg.writeToFile("GraphData.txt");   //write data to file to be accessed by python
+        ubg.RunPython();    //Draw the graph on terminal using plotext in python3
+        ubg.deleteFile("GraphData.txt");    //delete the data file.
     }
     
 }
